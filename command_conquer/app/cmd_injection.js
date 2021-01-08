@@ -5,8 +5,9 @@ var express = require('express');
 var app = express();
 
 app.get('/', function(req, res){
-    child_process.exec(
-	'ping -c 1 ' + req.query.host,
+    child_process.execFile(
+	'ping',
+	['-c 1', req.query.host],
 	function(err, data) {
 	    console.log('err: ', err)
 	    res.send(data);
