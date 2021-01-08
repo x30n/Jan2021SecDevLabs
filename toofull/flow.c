@@ -8,7 +8,7 @@ void flag3() {
 
 int main(void)  {
 
-    printf("flag3() is at %p\n", blah);
+    printf("flag3() is at %p\n", flag3);
 
     struct {
         char flag4[100];
